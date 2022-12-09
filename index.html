@@ -1,0 +1,63 @@
+<html>
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="css/cropper.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+	<title>Upload Video</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+</head>
+<body>
+	<div class="container">
+		<div class="main">
+    <div class="form-container">
+	    <form class="form m-0" role="form" action="" method="post" enctype="multipart/form-data">
+		    <div class="form-group mb-4" id="upload">
+            <div class="input-group file-upload">
+                <label class="input-group-btn m-0">
+                  <span class="btn btn-info" id="upload-button">Browse&hellip;
+										<input type="file" name="upfile" id="file-to-upload" accept="video/*,.mkv,.flv" capture="environment" autocomplete="off"/>
+									</span>
+            		</label>
+		            <input type="text" class="form-control" readonly autocomplete="off">
+		        </div>
+		    </div>
+				<div id="video-demo-container">
+					<video id="main-video" mute="mute" preload="auto">
+					  <source type="video/mp4" />
+					</video>
+					<canvas id="video-canvas"></canvas>
+					<div class="img">
+						<img id="image">
+					</div>
+				</div>
+				<div class="row no-gutters mb-4">
+					<div class="col-6 col-md-3 mb-3 mb-md-0" id="width-input">
+						<span class="font-weight-bold">Width</span>
+						<input type="text" class="form-control" id="width" name="width" value="0" style="max-width: 60px !important;" autocomplete="off">
+					</div>
+					<div class="col-6 col-md-3 mb-3 mb-md-0" id="height-input">
+						<span class="font-weight-bold">Height</span>
+						<input type="text" class="form-control" id="height" name="height" value="0" style="max-width: 60px !important;" autocomplete="off">
+					</div>
+					<div class="col-6 col-md-3" id="top-input">
+						<span class="font-weight-bold">X</span>
+						<input type="text" class="form-control" id="top" minlength="0" name="top" value="0" style="max-width: 60px !important;" autocomplete="off">
+					</div>
+					<div class="col-6 col-md-3" id="left-input">
+						<span class="font-weight-bold">Y</span>
+						<input type="text" class="form-control" id="left" name="left" value="0" style="max-width: 60px !important;" autocomplete="off">
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<button type="submit" name="submitfile" id="submitbutton" class="btn btn-info">Upload File</button>
+			</form>
+		</div>
+	</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/cropper.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
